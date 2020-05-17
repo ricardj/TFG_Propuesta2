@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 168326d5d5ee84cd48e920fec5da0f36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - activationSound: {fileID: 8300000, guid: 0b21207162d574eb3be1474935e4ba86, type: 3}
+  - deactivationSound: {fileID: 8300000, guid: 0b21207162d574eb3be1474935e4ba86, type: 3}
+  - menuSound: {instanceID: 0}
+  - changeOptionSound: {fileID: 8300000, guid: 379e79d83caa6405c9479d485d37f3fe, type: 3}
+  - playerNavMeshAgent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
