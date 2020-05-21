@@ -24,6 +24,7 @@ public class LearnSoundsMO : MenuOption
 
     public void playOption(int index)
     {
+        audioSource.Stop();
         audioSource.PlayOneShot(soundDescriptions[index].descriptionSound);
     }
     public void enterLearnOption(int index)
@@ -32,6 +33,8 @@ public class LearnSoundsMO : MenuOption
         {
             MenuManager.instance.exitLearnOption();
         }
-        audioSource.PlayOneShot(soundDescriptions[index].sound);
+        audioSource.clip = soundDescriptions[index].sound;
+        audioSource.Play();
+        //audioSource.PlayOneShot(soundDescriptions[index].sound);
     }
 }
