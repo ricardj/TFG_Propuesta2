@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerObjectInterface : MonoBehaviour
 {
+    public bool allCodesPicked = false;
     public List<Object> objects = new List<Object>();
     public KeyCode pickUpKey = KeyCode.Q;
 
@@ -28,6 +29,9 @@ public class PlayerObjectInterface : MonoBehaviour
             {
                 objects.Add(newObject);
                 audioSource.PlayOneShot(pickUpSound);
+
+                //TODO: improve that to check if its a code?
+                if (objects.Count == 3) allCodesPicked = true;
             }
         }
     }

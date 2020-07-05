@@ -82,7 +82,16 @@ public class NavigationManager : MonoBehaviour
 
     public List<OutdoorDOGOption> loadOutdoorDogOptions()
     {
-        return currentPlayerOutdoor.getAccessibleOutdoors();
+
+        List<OutdoorDOGOption> returnList = new List<OutdoorDOGOption>(currentPlayerOutdoor.getAccessibleOutdoors());
+
+        //If the player has completed the object stuff, we add the helicopter
+        if (GMLevel.instance.objectInterface.GetComponent<PlayerObjectInterface>().allCodesPicked)
+        {
+            returnList.Add(GMLevel.instance.extractionDOGOption);
+        }
+
+        return returnList;
     }
 
     public void vehicleUpdate()
